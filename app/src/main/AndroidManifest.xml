@@ -4,9 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icon_qasir_foreground"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Qasir"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -20,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activities.MainActivity"
-            android:label="@string/app_name"
+            android:label="Qasir"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait">
 
