@@ -11,7 +11,6 @@ import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
 import com.projects.kasirku.R;
-import com.projects.kasirku.databinding.CustomToastBinding;
 
 public class UIHelper {
 
@@ -36,33 +35,7 @@ public class UIHelper {
     public Integer calculateColumnNumber(){
         DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         float screenWidthDp = displayMetrics.widthPixels / displayMetrics.density;
-        int noOfColumns = (int) (screenWidthDp / 125); // +0.5 for correct rounding to int.
+        int noOfColumns = (int) (screenWidthDp / 100); // tampilan beranda
         return noOfColumns;
-    }
-
-    public void showToast(String message, int icon, int color){
-        CustomToastBinding binding = DataBindingUtil.inflate(
-                LayoutInflater.from(getContext()),
-                R.layout.custom_toast,
-                null,
-                false
-        );
-
-        binding.setIcon(icon);
-        binding.setInfo(message);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            binding.layout.setBackgroundTintList(ContextCompat.getColorStateList(getContext(), color));
-        }
-
-        Toast toast = new Toast(getContext());
-        toast.setDuration(Toast.LENGTH_SHORT);
-        toast.setView(binding.getRoot());
-        toast.setGravity(Gravity.FILL_HORIZONTAL|Gravity.BOTTOM, 0,0);
-
-        toast.show();
-    }
-
-    public void showErrorToast(String message){
-        showToast(message, R.drawable.ic_cancel_white, R.color.red);
     }
 }

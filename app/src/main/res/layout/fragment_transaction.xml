@@ -65,23 +65,7 @@
 
                     </LinearLayout>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingLeft="@dimen/_10sdp"
-                        android:paddingRight="@dimen/_10sdp"
-                        android:paddingTop="@dimen/_10sdp"
-                        android:paddingBottom="@dimen/_125sdp"
-                        android:clipToPadding="false"
-                        app:setupVerticalRecyclerView="@{@dimen/_10sdp}"
-                        tools:listitem="@layout/item_product"/>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        app:setupVerticalRecyclerView="@{@dimen/_5sdp}"
-                        tools:listitem="@layout/item_transaction" />
 
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
@@ -147,7 +131,7 @@
                 android:layout_margin="@dimen/_10sdp"
                 android:fontFamily="@font/nunitosans_bold"
                 android:text="@{@string/tag_total_transaction(TextHelper.newInstance().rupiahValue(total))}"
-                tools:text="Total Rp 15,000,00"
+                tools:text="Total Rp 0"
                 style="@style/buttonPrimary"/>
         </LinearLayout>
     </RelativeLayout>

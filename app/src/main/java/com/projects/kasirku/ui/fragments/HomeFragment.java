@@ -52,12 +52,12 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding> implements H
 
         binding.setMenuAdapter(adapterMenu);
         binding.shopNow.setOnClickListener(v ->
-                UIHelper.newInstance(getContext()).showErrorToast("Fitur ini belum tersedia")
+                UIHelper.newInstance(getContext())
         );
     }
 
     @Override
     public void onMenuClick(HomeMenuEnum menuEnum) {
-        UIHelper.newInstance(getContext()).showErrorToast("Fitur ini belum tersedia");
+        UIHelper.newInstance(getContext());
     }
 }
